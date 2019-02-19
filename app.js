@@ -13,16 +13,27 @@ var currently_displayed_right_img;
 var currently_displayed_middle_img
 var currently_displayed_left_img;
 
-
-
-
-
 var Item = function(name, url){ 
     this.name = name;
     this.url = url;
     this.clicked_on_count = 0;
+    this.votes = 0
+    this.views = 0
     the_catalog.push(this);
+
 };
+
+function theCatalog() {
+    var target = document.getElementById('all_items')
+
+    var name_td = document.createElement('section');
+    
+    var name = document.createElement('h2');
+    name.textContent = the_catalog[0];
+    name_td.appendChild(name);
+
+    target.appendChild(name_td);
+}
 
 var render_item = function(item,target_img,target_h2){
    target_img.src = item.url;
@@ -39,21 +50,21 @@ var handle_click_on_item = function (event) {
             currently_displayed_right_img.clicked_on_count ++;
         }
         
-        totes_items --;
-
+        
         var left_pic_idx= Math.floor(Math.random()* the_catalog.length);
         var middle_pic_idx= Math.floor(Math.random()* the_catalog.length);
         var right_pic_idx= Math.floor(Math.random()* the_catalog.length);
-
+        
         currently_displayed_left_img = the_catalog[left_pic_idx];
         currently_displayed_middle_img = the_catalog[middle_pic_idx];
         currently_displayed_right_img = the_catalog[right_pic_idx];
-
-    render_item(the_catalog[left_pic_idx],left_img, left_h2);
-    render_item(the_catalog[middle_pic_idx],middle_img, middle_h2);
-    render_item(the_catalog[right_pic_idx], right_img, right_h2);
-
-    if(totes_items <= 0){
+        
+        render_item(the_catalog[left_pic_idx],left_img, left_h2);
+        render_item(the_catalog[middle_pic_idx],middle_img, middle_h2);
+        render_item(the_catalog[right_pic_idx], right_img, right_h2);
+        
+        totes_items --;
+    if(totes_items <=0){
         item_container.removeEventListener('click', handle_click_on_item);
     }
 }
