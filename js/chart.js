@@ -46,9 +46,10 @@ var render_chart = function(){
     item_click_data.push(the_catalog[i].clicked_on_count);
     item_click_labels.push(the_catalog[i].name);
   }
-
+  
   newChart(item_click_data, item_click_labels, 'Item Data', ctx);
 };
+
 var newChart = function(item_click_data,item_click_labels,VotesPerItem,ctx) {
   new Chart(ctx, {//eslint-disable-line no-undef
     type: 'bar',

@@ -88,30 +88,32 @@ right_clicks.textContent = all_items[right_img_idx].num_times_clicked;
 click_count_section.appendChild(right_clicks);
 
 
-new Item ('R2D2 Travel Case', 'bag.jpg');
-new Item ('Cathulu Action Figure', 'cthulhu.jpg ');
-new Item ('Tentical 128GB USB 3.0 Thumbdrive', 'usb.gif');
-new Item ('Banana Cutter','banana.jpg' );
-new Item ('Ipad Bathroom stand', 'bathroom.jpg');
-new Item ('Yellow rainboots', 'boots.jpg');
-new Item ('Multitasking Breakfast maker', 'breakfast.jpg');
-new Item ('Meatball Flavored Gum', 'bubblegum.jpg');
-new Item ('Plastic Kid Chair', 'chair.jpg');
-new Item ('Dog Duck Mask', 'dog-duck.jpg');
-new Item ('Red Drake Meat', 'dragon.jpg');
-new Item ('Utensil Pens', 'pen.jpg');
-new Item ('Pet Sweeping Boots', 'pet-sweep.jpg');
-new Item ('Scissors with Pizza Cutter', 'scissors.jpg');
-new Item ('Shark Sleeping Bag', 'shark.jpg');
-new Item ('Kids Sweeper Brissle onsie', 'sweep.png');
-new Item ('Ram sleeping bag', 'Tauntaun.jpg');
-new Item ('Unicorn Meat', 'unicorn.jpg');
-new Item ('Inverted Watering can', 'water-can.jpg');
-new Item ('Wine Glass', 'wine-glass.jpg');
+new Item ('R2D2 Travel Case', './assets/bag.jpg');
+new Item ('Cathulu Action Figure', './assets/cthulhu.jpg ');
+new Item ('Tentical 128GB USB 3.0 Thumbdrive', './assets/usb.gif');
+new Item ('Banana Cutter','./assets/banana.jpg' );
+new Item ('Ipad Bathroom stand', './assets/bathroom.jpg');
+new Item ('Yellow rainboots', './assets/boots.jpg');
+new Item ('Multitasking Breakfast maker', './assets/breakfast.jpg');
+new Item ('Meatball Flavored Gum', './assets/bubblegum.jpg');
+new Item ('Plastic Kid Chair', './assets/chair.jpg');
+new Item ('Dog Duck Mask', './assets/dog-duck.jpg');
+new Item ('Red Drake Meat', './assets/dragon.jpg');
+new Item ('Utensil Pens', './assets/pen.jpg');
+new Item ('Pet Sweeping Boots', './assets/pet-sweep.jpg');
+new Item ('Scissors with Pizza Cutter', './assets/scissors.jpg');
+new Item ('Shark Sleeping Bag', './assets/shark.jpg');
+new Item ('Kids Sweeper Brissle onsie', './assets/sweep.png');
+new Item ('Ram sleeping bag', './assets/Tauntaun.jpg');
+new Item ('Unicorn Meat', './assets/unicorn.jpg');
+new Item ('Inverted Watering can', './assets/water-can.jpg');
+new Item ('Wine Glass', './assets/wine-glass.jpg');
 
 currently_displayed_left_img = the_catalog[0];
 currently_displayed_middle_img = the_catalog[1];
 currently_displayed_right_img = the_catalog[2];
 
 item_container.addEventListener('click', handle_click_on_item);
+
+
 
